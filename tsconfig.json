@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "cc-water-marker": [
+        "dist/cc-water-marker"
+      ],
+      "cc-water-marker/*": [
+        "dist/cc-water-marker/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

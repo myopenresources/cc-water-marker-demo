@@ -119,6 +119,47 @@
           }
         }
       }
-    }},
+    },
+    "cc-water-marker": {
+      "projectType": "library",
+      "root": "projects/cc-water-marker",
+      "sourceRoot": "projects/cc-water-marker/src",
+      "prefix": "cc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cc-water-marker/tsconfig.lib.json",
+            "project": "projects/cc-water-marker/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/cc-water-marker/ng-package.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cc-water-marker/src/test.ts",
+            "tsConfig": "projects/cc-water-marker/tsconfig.spec.json",
+            "karmaConfig": "projects/cc-water-marker/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cc-water-marker/tsconfig.lib.json",
+              "projects/cc-water-marker/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "cc-water-marker-demo"
 }
