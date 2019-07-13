@@ -6,7 +6,7 @@ npm install cc-water-marker --save  或 yarn add  cc-water-marker
 ## 使用
 
 ```javascript
-// 使用模块
+// 业务模块
 import { WaterMarkerModule } from 'cc-water-marker';
 
 
@@ -23,8 +23,24 @@ import { WaterMarkerModule } from 'cc-water-marker';
 })
 export class AppModule { }
 
-//水印宽高是根据元素的宽高定的，请通过css设置元素的宽高
+//业务html，水印宽高是根据元素的宽高定的，请通过css设置元素的宽高
 <div class="div" ccWaterMarker [options]="options" [zIndex]="8"></div>
+
+//业务组件
+import { Component } from '@angular/core';
+import { WaterMarkerOptionModel } from 'cc-water-marker';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.less']
+})
+export class AppComponent {
+  options: WaterMarkerOptionModel = {
+    watermarkLabel: '这是一个水印'
+  };
+}
+
 
 ```
 
