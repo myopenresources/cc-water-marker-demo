@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WaterMarkerOptionModel } from 'cc-water-marker';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'cc-water-marker-demo';
+  options: WaterMarkerOptionModel = {
+    watermarkLabel: '这是一个水印'
+  };
 }

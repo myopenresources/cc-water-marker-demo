@@ -26,8 +26,6 @@ export class WaterMarkerOptionModel {
     watermarkAngle?: number;
     // 是否显示
     showWaterMark?: boolean;
-    // 用户对属性列表
-    userKeys?: any;
     // 分割符号
     splitChar?: string;
 }

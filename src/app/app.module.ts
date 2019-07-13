@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CcWaterMarkerModule } from 'cc-water-marker';
+import { WaterMarkerModule } from 'cc-water-marker';
 
 import { AppComponent } from './app.component';
 
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    CcWaterMarkerModule
+    WaterMarkerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

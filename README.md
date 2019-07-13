@@ -1,27 +1,58 @@
-# CcWaterMarkerDemo
+# Angular 版本水印指令
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+## 安装
+npm install cc-water-marker --save  或 yarn add  cc-water-marker
 
-## Development server
+## 使用
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```javascript
+// 使用模块
+import { WaterMarkerModule } from 'cc-water-marker';
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    WaterMarkerModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Build
+## 参数
+1. options:WaterMarkerOptionModel; 具体参数如下：
+// 水印文本
+watermarkLabel?: string;
+// 水印起始位置x轴坐标
+watermarkX?: number;
+// 水印起始位置Y轴坐标
+watermarkY?: number;
+// 水印x轴间隔
+watermarkXSpace?: number;
+// 水印y轴间隔
+watermarkYSpace?: number;
+// 水印字体颜色
+watermarkColor?: string;
+// 水印字体大小
+watermarkFontSize?: string;
+// 水印透明度，要求设置在大于等于0.003
+watermarkAlpha?: number;
+// 水印宽度
+watermarkWidth?: number;
+// 水印高度
+watermarkHeight?: number;
+// 水印倾斜度数
+watermarkAngle?: number;
+// 是否显示
+showWaterMark?: boolean;
+// 分割符号
+splitChar?: string;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2. zIndex:number; 层级，默认值为999
